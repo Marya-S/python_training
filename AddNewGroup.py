@@ -20,7 +20,7 @@ class AddNewGroup(unittest.TestCase):
         wd.find_element_by_name("user").send_keys("admin")
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys("secret")
-        wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[2]").click()
+        wd.find_element_by_xpath("//input[@type='submit']").click()
         wd.find_element_by_link_text("groups").click()
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
