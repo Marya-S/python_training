@@ -41,7 +41,7 @@ class Application:
         wd = self.wd
         wd.get("http://localhost/addressbook/")
 
-    def login(self,username, password):
+    def login(self, username, password):
         wd = self.wd
         self.open_start_page()
         wd.find_element_by_name("user").click()
@@ -50,6 +50,25 @@ class Application:
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//input[@type='submit']").click()
+
+    def create_contact(self, contact):
+        wd = self.wd
+        self.open_new_contact()
+        wd.find_element_by_name("firstname").click()
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys(contact.firstname)
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys(contact.lastname)
+        wd.find_element_by_name("home").click()
+        wd.find_element_by_name("home").clear()
+        wd.find_element_by_name("home").send_keys(contact.homenumber)
+        wd.find_element_by_name("mobile").clear()
+        wd.find_element_by_name("mobile").send_keys(contact.mobilenumber)
+        wd.find_element_by_name("submit").click()
+
+    def open_new_contact(self):
+        wd = self.wd
+        wd.find_element_by_link_text("add new").click()
 
     def destroy(self):
         self.wd.quit()
