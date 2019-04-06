@@ -35,6 +35,10 @@ class ContactHelper:
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobilenumber)
 
+    def count(self):
+        wd = self.app.wd
+        return len(wd.find_elements_by_xpath("//td[@class ='center'][1]"))
+
     def open_new_contact(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
