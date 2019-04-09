@@ -37,7 +37,12 @@ class ContactHelper:
 
     def count(self):
         wd = self.app.wd
+        self.open_home_page()
         return len(wd.find_elements_by_xpath("//td[@class ='center'][1]"))
+
+    def open_home_page(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
 
     def open_new_contact(self):
         wd = self.app.wd
