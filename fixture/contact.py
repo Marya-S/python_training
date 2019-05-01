@@ -11,17 +11,23 @@ class ContactHelper:
         wd.find_element_by_name("submit").click()
         self.contact_cache = None
 
-    def delete(self):
+    def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
-        wd.find_element_by_xpath("//input[@type ='checkbox'][1]").click()
+        self.select_contact(index)
         wd.find_element_by_xpath("//input[@value = 'Delete']").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
-    def edit(self, contact):
+    def edit_first_contact(self, contact):
+        self.edit_group_by_index(contact, 0)
+
+    def edit_group_by_index(self, contact, index):
         wd = self.app.wd
         self.open_home_page()
-        wd.find_element_by_xpath("//input[@type ='checkbox'][1]").click()
+        self.select_contact(index)
         wd.find_element_by_xpath("//tr[@name ='entry'][1]//img[@title='Edit']").click()
         self.fill_contact(contact)
         wd.find_element_by_xpath("//input[@value = 'Update']").click()
@@ -67,4 +73,8 @@ class ContactHelper:
                 firstname = element.find_element_by_xpath(".//td[3]").text
                 self.contact_cache.append(Contact(id=id, firstname=firstname, lastname=lastname))
         return list(self.contact_cache)
+
+    def select_contact(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_xpath("//input[@type ='checkbox']")[index].click()
 

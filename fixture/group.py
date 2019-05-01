@@ -19,12 +19,9 @@ class GroupHelper:
         self.return_group_page()
         self.group_cache = None
 
-    def delete(self):
-        wd = self.app.wd
-        self.open_group_page()
-        wd.find_element_by_xpath("//span[@class='group']/input[1]").click()
-        wd.find_element_by_name("delete").click()
-        self.group_cache = None
+    def delete_first_group(self):
+        self.delete_group_by_index(0)
+
 
     def fill_form(self, group):
         wd = self.app.wd
@@ -38,10 +35,13 @@ class GroupHelper:
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys(group.footer)
 
-    def edit(self, group):
+    def edit_first_group(self, group):
+        self.edit_group_by_index(group, 0)
+
+    def edit_group_by_index(self, group, index):
         wd = self.app.wd
         self.open_group_page()
-        wd.find_element_by_xpath("//span[@class='group']/input[1]").click()
+        self.select_group(index)
         wd.find_element_by_name("edit").click()
         # fiil group form
         self.fill_form(group)
@@ -72,4 +72,15 @@ class GroupHelper:
                 id = element.find_element_by_name('selected[]').get_attribute("value")
                 self.group_cache.append(Group(name=text, id=id))
         return list(self.group_cache)
+
+    def delete_group_by_index(self, index):
+        wd = self.app.wd
+        self.open_group_page()
+        self.select_group(index)
+        wd.find_element_by_name("delete").click()
+        self.group_cache = None
+
+    def select_group(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name('selected[]')[index].click()
 

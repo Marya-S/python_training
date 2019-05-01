@@ -14,7 +14,7 @@ def test_create_contact(app):
 def test_create_second_contact(app):
     old_contacts = app.contact.get_contact_list()
     contact = Contact(firstname="Sergey", lastname="Petrov", homenumber="84951234312", mobilenumber="890311143443")
-    app.contact.create()
+    app.contact.create(contact)
     new_contacts = app.contact.get_contact_list(contact)
     assert len(old_contacts) + 1 == len(new_contacts)
     old_contacts.append(contact)
