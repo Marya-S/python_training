@@ -22,13 +22,15 @@ class ContactHelper:
         self.contact_cache = None
 
     def edit_first_contact(self, contact):
-        self.edit_group_by_index(contact, 0)
+        self.edit_contact_by_index(contact, 0)
 
-    def edit_group_by_index(self, contact, index):
+    def edit_contact_by_index(self, contact, index):
         wd = self.app.wd
         self.open_home_page()
         self.select_contact(index)
-        wd.find_element_by_xpath("//tr[@name ='entry'][1]//img[@title='Edit']").click()
+        row = wd.find_elements_by_name("entry")[index]
+        cell = row.find_elements_by_tag_name("td")[7]
+        cell.find_element_by_tag_name("a").click()
         self.fill_contact(contact)
         wd.find_element_by_xpath("//input[@value = 'Update']").click()
         self.contact_cache = None
@@ -76,5 +78,5 @@ class ContactHelper:
 
     def select_contact(self, index):
         wd = self.app.wd
-        wd.find_elements_by_xpath("//input[@type ='checkbox']")[index].click()
+        wd.find_elements_by_name('selected[]')[index].click()
 
