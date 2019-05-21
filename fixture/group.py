@@ -50,6 +50,18 @@ class GroupHelper:
         self.return_group_page()
         self.group_cache = None
 
+    def edit_group_by_id(self, id, group):
+        wd = self.app.wd
+        self.open_group_page()
+        self.select_group_by_id(id)
+        wd.find_element_by_name("edit").click()
+        # fiil group form
+        self.fill_form(group)
+        # send form
+        wd.find_element_by_name("update").click()
+        self.return_group_page()
+        self.group_cache = None
+
     def count(self):
         wd = self.app.wd
         self.open_group_page()
@@ -83,4 +95,26 @@ class GroupHelper:
     def select_group(self, index):
         wd = self.app.wd
         wd.find_elements_by_name('selected[]')[index].click()
+
+
+    def delete_group_by_id(self, id):
+        wd = self.app.wd
+        self.open_group_page()
+        self.select_group_by_id(id)
+        wd.find_element_by_name("delete").click()
+        self.group_cache = None
+
+    def select_group_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector('input[value="%s"]' %id).click()
+
+    def open_group_pag_by_url(self, group):
+        wd = self.app.wd
+        wd.get('http://localhost/addressbook/?group=' + group.id)
+
+    def del_contact_in_group(self, contact, group):
+        wd = self.app.wd
+        self.open_group_pag_by_url(group)
+        wd.find_element_by_css_selector('input[value="%s"]' % contact.id).click()
+        wd.find_element_by_name("remove").click()
 

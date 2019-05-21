@@ -1,5 +1,6 @@
 from model.contact import Contact
 import re
+from selenium.webdriver.support.ui import Select
 
 
 class ContactHelper:
@@ -19,7 +20,14 @@ class ContactHelper:
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
-        self.select_contact(index)
+        self.select_contact_by_index(index)
+        wd.find_element_by_xpath("//input[@value = 'Delete']").click()
+        wd.switch_to_alert().accept()
+        self.contact_cache = None
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.select_contact_by_id(id)
         wd.find_element_by_xpath("//input[@value = 'Delete']").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
@@ -30,10 +38,19 @@ class ContactHelper:
     def edit_contact_by_index(self, contact, index):
         wd = self.app.wd
         self.open_home_page()
-        self.select_contact(index)
+        self.select_contact_by_index(index)
         row = wd.find_elements_by_name("entry")[index]
         cell = row.find_elements_by_tag_name("td")[7]
         cell.find_element_by_tag_name("a").click()
+        self.fill_contact(contact)
+        wd.find_element_by_xpath("//input[@value = 'Update']").click()
+        self.contact_cache = None
+
+    def edit_contact_by_id(self, id, contact):
+        wd = self.app.wd
+        self.open_home_page()
+        self.select_contact_by_id(id)
+        wd.find_element_by_xpath('//input[@id="%s"]/following::td[7]/a' % id).click()
         self.fill_contact(contact)
         wd.find_element_by_xpath("//input[@value = 'Update']").click()
         self.contact_cache = None
@@ -85,9 +102,13 @@ class ContactHelper:
                                                   all_email_from_home_page=all_emails, address=address))
         return list(self.contact_cache)
 
-    def select_contact(self, index):
+    def select_contact_by_index(self, index):
         wd = self.app.wd
         wd.find_elements_by_name('selected[]')[index].click()
+
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector('input[value="%s"]' % id).click()
 
     def open_contact_view_by_index(self, index):
         wd = self.app.wd
@@ -131,5 +152,15 @@ class ContactHelper:
         secondarynumber = re.search("P: (.*)", text).group(1)
         return Contact(homenumber=homenumber, mobilenumber=mobilenumber,
                        worknumber=worknumber, secondarynumber=secondarynumber)
+
+    def add_contact_in_group(self, contact, group):
+        wd = self.app.wd
+        self.open_home_page()
+        self.select_contact_by_id(contact.id)
+        Select(wd.find_element_by_name("to_group")).select_by_value(group.id)
+        wd.find_element_by_name("add").click()
+
+
+
 
 
