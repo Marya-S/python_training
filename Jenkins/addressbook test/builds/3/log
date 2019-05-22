@@ -1,0 +1,296 @@
+Started by user [8mha:////4OJaBvl/wNx7Z0W84nrjG04WbG5dKrxxhfR3cWJy/jPXAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Users\Mary\.jenkins\workspace\addressbook test
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/Marya-S/python_training # timeout=10
+Fetching upstream changes from https://github.com/Marya-S/python_training
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress https://github.com/Marya-S/python_training +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 6b0a2bfc1e70968127df052139c5f1d88e355e57 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 6b0a2bfc1e70968127df052139c5f1d88e355e57
+Commit message: "Merge pull request #2 from Marya-S/lesson_7"
+ > git.exe rev-list --no-walk 6b0a2bfc1e70968127df052139c5f1d88e355e57 # timeout=10
+[addressbook test] $ cmd.exe /c call C:\Users\Mary\AppData\Local\Temp\shiningpanda3868854936148162419.bat
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>pip install -r C:\Users\Mary\PycharmProjects\python_training\requirements.txt 
+Collecting pytest (from -r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/56/53/0ae37ab12c457945ae0152c6571d6d40eecccddf25f71fe328f9aefe90ca/pytest-4.5.0-py2.py3-none-any.whl
+Collecting selenium (from -r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/80/d6/4294f0b4bce4de0abf13e17190289f9d0613b0a44e5dd6a7f5ca98459853/selenium-3.141.0-py2.py3-none-any.whl
+Collecting jsonpickle (from -r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/dc/12/8c44eabb501e2bc0aec0dd152b328074d98a50968d3a02be28f6037f0c6a/jsonpickle-1.1-py2.py3-none-any.whl
+Collecting pony (from -r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/4e/70/05d61be7c65ecac6d8798221f53879c3620958864cddfd74516c1d3178de/pony-0.7.10.tar.gz
+Collecting pymysql (from -r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 5))
+  Using cached https://files.pythonhosted.org/packages/ed/39/15045ae46f2a123019aa968dfcba0396c161c20f855f11dea6796bcaae95/PyMySQL-0.9.3-py2.py3-none-any.whl
+Collecting mysql-connector-python-rf (from -r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 6))
+  Downloading https://files.pythonhosted.org/packages/21/79/2ff01ab7aa08db3a16b70b990c579c1024c6b2a734263cc7513a758867de/mysql-connector-python-rf-2.2.2.tar.gz (11.9MB)
+Collecting attrs>=17.4.0 (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/23/96/d828354fa2dbdf216eaa7b7de0db692f12c234f7ef888cc14980ef40d1d2/attrs-19.1.0-py2.py3-none-any.whl
+Collecting six>=1.10.0 (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Collecting py>=1.5.0 (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/76/bc/394ad449851729244a97857ee14d7cba61ddb268dce3db538ba2f2ba1f0f/py-1.8.0-py2.py3-none-any.whl
+Collecting pluggy!=0.10,<1.0,>=0.9 (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/cc/e4/2003a5e4e445424602c8f06a436eeed9e78bcae4947128f64741c66c7216/pluggy-0.11.0-py2.py3-none-any.whl
+Collecting more-itertools>=4.0.0; python_version > "2.7" (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/b3/73/64fb5922b745fc1daee8a2880d907d2a70d9c7bb71eea86fcb9445daab5e/more_itertools-7.0.0-py3-none-any.whl
+Requirement already satisfied: setuptools in c:\users\mary\.jenkins\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1)) (41.0.1)
+Collecting colorama; sys_platform == "win32" (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/4f/a6/728666f39bfff1719fc94c481890b2106837da9318031f71a8424b662e12/colorama-0.4.1-py2.py3-none-any.whl
+Collecting atomicwrites>=1.0 (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/52/90/6155aa926f43f2b2a22b01be7241be3bfd1ceaf7d0b3267213e8127d41f4/atomicwrites-1.3.0-py2.py3-none-any.whl
+Collecting wcwidth (from pytest->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/7e/9f/526a6947247599b084ee5232e4f9190a38f398d7300d866af3ab571a5bfe/wcwidth-0.1.7-py2.py3-none-any.whl
+Collecting urllib3 (from selenium->-r C:\Users\Mary\PycharmProjects\python_training\requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/39/ec/d93dfc69617a028915df914339ef66936ea976ef24fa62940fd86ba0326e/urllib3-1.25.2-py2.py3-none-any.whl
+Building wheels for collected packages: pony, mysql-connector-python-rf
+  Building wheel for pony (setup.py): started
+  Building wheel for pony (setup.py): finished with status 'done'
+  Stored in directory: C:\Users\Mary\AppData\Local\pip\Cache\wheels\b2\d5\8a\de75ead13f26ef7130122c538524d01955ca3b3afd5fe3d93a
+  Building wheel for mysql-connector-python-rf (setup.py): started
+  Building wheel for mysql-connector-python-rf (setup.py): finished with status 'done'
+  Stored in directory: C:\Users\Mary\AppData\Local\pip\Cache\wheels\87\58\fb\d95c84fad7e1bebfed324c13e107ebb08e1997c9226532859a
+Successfully built pony mysql-connector-python-rf
+Installing collected packages: attrs, six, py, pluggy, more-itertools, colorama, atomicwrites, wcwidth, pytest, urllib3, selenium, jsonpickle, pony, pymysql, mysql-connector-python-rf
+Successfully installed atomicwrites-1.3.0 attrs-19.1.0 colorama-0.4.1 jsonpickle-1.1 more-itertools-7.0.0 mysql-connector-python-rf-2.2.2 pluggy-0.11.0 pony-0.7.10 py-1.8.0 pymysql-0.9.3 pytest-4.5.0 selenium-3.141.0 six-1.12.0 urllib3-1.25.2 wcwidth-0.1.7
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>py.test test\DeleteContact.py 
+============================= test session starts =============================
+platform win32 -- Python 3.7.2, pytest-4.5.0, py-1.8.0, pluggy-0.11.0
+rootdir: C:\Users\Mary\.jenkins\workspace\addressbook test
+collected 1 item
+
+test\DeleteContact.py EE                                                 [100%]
+
+=================================== ERRORS ====================================
+____________________ ERROR at setup of test_delete_contact ____________________
+
+self = <pymysql.connections.Connection object at 0x042EB8D0>, sock = None
+
+    def connect(self, sock=None):
+        self._closed = False
+        try:
+            if sock is None:
+                if self.unix_socket:
+                    sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+                    sock.settimeout(self.connect_timeout)
+                    sock.connect(self.unix_socket)
+                    self.host_info = "Localhost via UNIX socket"
+                    self._secure = True
+                    if DEBUG: print('connected using unix_socket')
+                else:
+                    kwargs = {}
+                    if self.bind_address is not None:
+                        kwargs['source_address'] = (self.bind_address, 0)
+                    while True:
+                        try:
+                            sock = socket.create_connection(
+                                (self.host, self.port), self.connect_timeout,
+>                               **kwargs)
+
+..\..\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages\pymysql\connections.py:583: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+address = ('localhost', 3306), timeout = 10, source_address = None
+
+    def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
+                          source_address=None):
+        """Connect to *address* and return the socket object.
+    
+        Convenience function.  Connect to *address* (a 2-tuple ``(host,
+        port)``) and return the socket object.  Passing the optional
+        *timeout* parameter will set the timeout on the socket instance
+        before attempting to connect.  If no *timeout* is supplied, the
+        global default timeout setting returned by :func:`getdefaulttimeout`
+        is used.  If *source_address* is set it must be a tuple of (host, port)
+        for the socket to bind as a source address before making the connection.
+        A host of '' or port 0 tells the OS to use the default.
+        """
+    
+        host, port = address
+        err = None
+        for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+            af, socktype, proto, canonname, sa = res
+            sock = None
+            try:
+                sock = socket(af, socktype, proto)
+                if timeout is not _GLOBAL_DEFAULT_TIMEOUT:
+                    sock.settimeout(timeout)
+                if source_address:
+                    sock.bind(source_address)
+                sock.connect(sa)
+                # Break explicitly a reference cycle
+                err = None
+                return sock
+    
+            except error as _:
+                err = _
+                if sock is not None:
+                    sock.close()
+    
+        if err is not None:
+>           raise err
+
+C:\Python37\Lib\socket.py:727: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+address = ('localhost', 3306), timeout = 10, source_address = None
+
+    def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
+                          source_address=None):
+        """Connect to *address* and return the socket object.
+    
+        Convenience function.  Connect to *address* (a 2-tuple ``(host,
+        port)``) and return the socket object.  Passing the optional
+        *timeout* parameter will set the timeout on the socket instance
+        before attempting to connect.  If no *timeout* is supplied, the
+        global default timeout setting returned by :func:`getdefaulttimeout`
+        is used.  If *source_address* is set it must be a tuple of (host, port)
+        for the socket to bind as a source address before making the connection.
+        A host of '' or port 0 tells the OS to use the default.
+        """
+    
+        host, port = address
+        err = None
+        for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+            af, socktype, proto, canonname, sa = res
+            sock = None
+            try:
+                sock = socket(af, socktype, proto)
+                if timeout is not _GLOBAL_DEFAULT_TIMEOUT:
+                    sock.settimeout(timeout)
+                if source_address:
+                    sock.bind(source_address)
+>               sock.connect(sa)
+E               ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+C:\Python37\Lib\socket.py:716: ConnectionRefusedError
+
+During handling of the above exception, another exception occurred:
+
+request = <SubRequest 'db' for <Function test_delete_contact>>
+
+    @pytest.fixture(scope="session")
+    def db(request):
+        global target
+        db_config = load_config(request.config.getoption("--target"))['db']
+>       dbfixture = DBFixture(host=db_config['host'], name=db_config['name'], user=db_config['user'], password=db_config['password'])
+
+conftest.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+fixture\db.py:12: in __init__
+    self.connection = pymysql.connect(host=host, database=name, user=user, password=password, autocommit=True)
+..\..\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages\pymysql\__init__.py:94: in Connect
+    return Connection(*args, **kwargs)
+..\..\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages\pymysql\connections.py:325: in __init__
+    self.connect()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <pymysql.connections.Connection object at 0x042EB8D0>, sock = None
+
+    def connect(self, sock=None):
+        self._closed = False
+        try:
+            if sock is None:
+                if self.unix_socket:
+                    sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+                    sock.settimeout(self.connect_timeout)
+                    sock.connect(self.unix_socket)
+                    self.host_info = "Localhost via UNIX socket"
+                    self._secure = True
+                    if DEBUG: print('connected using unix_socket')
+                else:
+                    kwargs = {}
+                    if self.bind_address is not None:
+                        kwargs['source_address'] = (self.bind_address, 0)
+                    while True:
+                        try:
+                            sock = socket.create_connection(
+                                (self.host, self.port), self.connect_timeout,
+                                **kwargs)
+                            break
+                        except (OSError, IOError) as e:
+                            if e.errno == errno.EINTR:
+                                continue
+                            raise
+                    self.host_info = "socket %s:%d" % (self.host, self.port)
+                    if DEBUG: print('connected using socket')
+                    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+                sock.settimeout(None)
+                sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
+            self._sock = sock
+            self._rfile = _makefile(sock, 'rb')
+            self._next_seq_id = 0
+    
+            self._get_server_information()
+            self._request_authentication()
+    
+            if self.sql_mode is not None:
+                c = self.cursor()
+                c.execute("SET sql_mode=%s", (self.sql_mode,))
+    
+            if self.init_command is not None:
+                c = self.cursor()
+                c.execute(self.init_command)
+                c.close()
+                self.commit()
+    
+            if self.autocommit_mode is not None:
+                self.autocommit(self.autocommit_mode)
+        except BaseException as e:
+            self._rfile = None
+            if sock is not None:
+                try:
+                    sock.close()
+                except:  # noqa
+                    pass
+    
+            if isinstance(e, (OSError, IOError, socket.error)):
+                exc = err.OperationalError(
+                        2003,
+                        "Can't connect to MySQL server on %r (%s)" % (
+                            self.host, e))
+                # Keep original exception and traceback to investigate error.
+                exc.original_exception = e
+                exc.traceback = traceback.format_exc()
+                if DEBUG: print(exc.traceback)
+>               raise exc
+E               pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение)")
+
+..\..\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages\pymysql\connections.py:630: OperationalError
+__________________ ERROR at teardown of test_delete_contact ___________________
+
+tp = <class 'AttributeError'>, value = None, tb = None
+
+    def reraise(tp, value, tb=None):
+        try:
+            if value is None:
+                value = tp()
+            if value.__traceback__ is not tb:
+                raise value.with_traceback(tb)
+>           raise value
+
+..\..\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages\six.py:693: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages\six.py:693: in reraise
+    raise value
+..\..\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\lib\site-packages\six.py:693: in reraise
+    raise value
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def fin():
+>       fixture.session.ensure_logout()
+E       AttributeError: 'NoneType' object has no attribute 'session'
+
+conftest.py:47: AttributeError
+=========================== 2 error in 2.50 seconds ===========================
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>exit 1 
+Build step 'Virtualenv Builder' marked build as failure
+Finished: FAILURE

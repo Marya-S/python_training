@@ -1,0 +1,45 @@
+Started by user [8mha:////4OJaBvl/wNx7Z0W84nrjG04WbG5dKrxxhfR3cWJy/jPXAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Users\Mary\.jenkins\workspace\addressbook test
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Marya-S/python_training
+ > git.exe init C:\Users\Mary\.jenkins\workspace\addressbook test # timeout=10
+Fetching upstream changes from https://github.com/Marya-S/python_training
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress https://github.com/Marya-S/python_training +refs/heads/*:refs/remotes/origin/*
+ > git.exe config remote.origin.url https://github.com/Marya-S/python_training # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/Marya-S/python_training # timeout=10
+Fetching upstream changes from https://github.com/Marya-S/python_training
+ > git.exe fetch --tags --force --progress https://github.com/Marya-S/python_training +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 6b0a2bfc1e70968127df052139c5f1d88e355e57 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 6b0a2bfc1e70968127df052139c5f1d88e355e57
+Commit message: "Merge pull request #2 from Marya-S/lesson_7"
+First time build. Skipping changelog.
+[addressbook test] $ cmd.exe /C "C:\Python37\python.exe C:\Users\Mary\.jenkins\shiningpanda\jobs\f63e8875\virtualenv.py C:\Users\Mary\.jenkins\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9 && exit %%ERRORLEVEL%%"
+PYTHONHOME is set.  You *must* activate the virtualenv before using it
+Using base prefix 'C:\\Python37'
+New python executable in C:\Users\Mary\.jenkins\shiningpanda\jobs\f63e8875\virtualenvs\d41d8cd9\Scripts\python.exe
+Installing setuptools, pip, wheel...done.
+C:\Users\Mary\.jenkins\shiningpanda\jobs\f63e8875\virtualenv.py:1041: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+[addressbook test] $ cmd.exe /c call C:\Users\Mary\AppData\Local\Temp\shiningpanda5868513480402472458.bat
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>pip insrall -r requirements.txt 
+ERROR: unknown command "insrall" - maybe you meant "install"
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>py.test test\DeleteContact.py 
+ImportError while loading conftest 'C:\Users\Mary\.jenkins\workspace\addressbook test\conftest.py'.
+conftest.py:2: in <module>
+    from fixture.db import DBFixture
+fixture\db.py:1: in <module>
+    import pymysql
+E   ModuleNotFoundError: No module named 'pymysql'
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>exit 4 
+Build step 'Virtualenv Builder' marked build as failure
+Finished: FAILURE

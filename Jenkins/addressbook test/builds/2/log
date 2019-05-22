@@ -1,0 +1,33 @@
+Started by user [8mha:////4OJaBvl/wNx7Z0W84nrjG04WbG5dKrxxhfR3cWJy/jPXAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Users\Mary\.jenkins\workspace\addressbook test
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/Marya-S/python_training # timeout=10
+Fetching upstream changes from https://github.com/Marya-S/python_training
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress https://github.com/Marya-S/python_training +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 6b0a2bfc1e70968127df052139c5f1d88e355e57 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 6b0a2bfc1e70968127df052139c5f1d88e355e57
+Commit message: "Merge pull request #2 from Marya-S/lesson_7"
+ > git.exe rev-list --no-walk 6b0a2bfc1e70968127df052139c5f1d88e355e57 # timeout=10
+[addressbook test] $ cmd.exe /c call C:\Users\Mary\AppData\Local\Temp\shiningpanda5330931124369854735.bat
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>pip install -r requirements.txt 
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>py.test test\DeleteContact.py 
+ImportError while loading conftest 'C:\Users\Mary\.jenkins\workspace\addressbook test\conftest.py'.
+conftest.py:2: in <module>
+    from fixture.db import DBFixture
+fixture\db.py:1: in <module>
+    import pymysql
+E   ModuleNotFoundError: No module named 'pymysql'
+
+C:\Users\Mary\.jenkins\workspace\addressbook test>exit 4 
+Build step 'Virtualenv Builder' marked build as failure
+Finished: FAILURE
