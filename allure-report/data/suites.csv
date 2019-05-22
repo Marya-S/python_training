@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed May 22 15:30:44 GMT+03:00 2019","Wed May 22 15:30:45 GMT+03:00 2019","913","test","AddNewGroup","","","","test_add_group[None:group_namexFZU]",""
+"passed","Wed May 22 15:30:43 GMT+03:00 2019","Wed May 22 15:30:44 GMT+03:00 2019","942","test","AddNewGroup","","","","test_add_group[None:]",""
+"passed","Wed May 22 15:30:48 GMT+03:00 2019","Wed May 22 15:30:48 GMT+03:00 2019","839","test","AddNewGroup","","","","test_add_group[None:group_name7 ws]",""
+"passed","Wed May 22 15:30:46 GMT+03:00 2019","Wed May 22 15:30:47 GMT+03:00 2019","875","test","AddNewGroup","","","","test_add_group[None:group_name]",""
+"passed","Wed May 22 15:30:47 GMT+03:00 2019","Wed May 22 15:30:48 GMT+03:00 2019","1046","test","AddNewGroup","","","","test_add_group[None:group_nameivy  G P ]",""
+"passed","Wed May 22 15:30:45 GMT+03:00 2019","Wed May 22 15:30:46 GMT+03:00 2019","829","test","AddNewGroup","","","","test_add_group[None:group_namer6Xn]",""
+"passed","Wed May 22 02:22:13 GMT+03:00 2019","Wed May 22 02:22:14 GMT+03:00 2019","1210","test","EditContact","","","","test_edit_contact",""
